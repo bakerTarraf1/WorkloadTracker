@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "ZY8eDH/rO41YVPu9bdxBbN2AUp860gMlF/IJ3OcDRHU=",
+  "Source": "WorkloadTracker.API",
+  "BasePath": "_content/WorkloadTracker.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
