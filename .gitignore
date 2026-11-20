@@ -1,0 +1,13 @@
+/bin/
+/obj/
+**/bin/
+**/obj/
+**/.vs/
+**/node_modules/
+**/build/
+**/dist/
+.env
+.env.*
+
+**/appsettings.json
+**/appsettings.Development.json
