@@ -46,7 +46,7 @@ const TaskFormPage = () => {
         });
       });
     }
-  }, [id]);
+  }, [id, isEdit]);
 
   const handleSubmit = async () => {
     try {

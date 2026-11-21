@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import {
   Box, Typography, Paper, Chip, Button,
@@ -28,7 +28,7 @@ const TaskDetailPage = () => {
   const { user } = useAuth();
   const navigate = useNavigate();
 
-  const loadTask = async () => {
+  const loadTask = useCallback(async () => {
     try {
       setError('');
       setLoading(true);
@@ -43,12 +43,12 @@ const TaskDetailPage = () => {
     } finally {
       setLoading(false);
     }
-  };
+  }, [id]);
 
   useEffect(() => {
     loadTask();
     getAllUsers().then(setUsers);
-  }, [id]);
+  }, [loadTask]);
 
   const handleStatusUpdate = async () => {
     if (!user || !task) return;

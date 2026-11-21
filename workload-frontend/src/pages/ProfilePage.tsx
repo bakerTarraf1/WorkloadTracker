@@ -4,12 +4,10 @@ import {
   Alert, Avatar, Divider, Chip, LinearProgress
 } from '@mui/material';
 import { getProfile, updateProfile } from '../api/profile';
-import { useAuth } from '../context/AuthContext';
 import { getStatusLabel, getPriorityLabel } from '../utils/workload';
 import Navbar from '../components/Navbar';
 
 const ProfilePage = () => {
-  const { user } = useAuth();
   const [profile, setProfile] = useState<any>(null);
   const [fullName, setFullName] = useState('');
   const [phoneNumber, setPhoneNumber] = useState('');

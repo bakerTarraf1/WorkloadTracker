@@ -1,14 +1,12 @@
 import { useEffect, useState, useRef } from 'react';
 import {
   Box, Typography, Paper, TextField, Button,
-  Avatar, Badge, Divider, CircularProgress, IconButton
+  Avatar, Badge, Divider, CircularProgress
 } from '@mui/material';
-import { useAuth } from '../context/AuthContext';
 import Navbar from '../components/Navbar';
 import { getConversations, getMessages, sendMessage, getMembers } from '../api/messages';
 
 const MessagesPage = () => {
-  const { user } = useAuth();
   const [members, setMembers] = useState<any[]>([]);
   const [conversations, setConversations] = useState<any[]>([]);
   const [selectedUser, setSelectedUser] = useState<any>(null);
